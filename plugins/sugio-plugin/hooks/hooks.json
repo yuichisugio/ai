@@ -2,7 +2,7 @@
 	"hooks": {
 		"Notification": [
 			{
-				"matcher": "",
+				"matcher": "*",
 				"hooks": [
 					{
 						"type": "command",

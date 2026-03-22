@@ -1,5 +1,7 @@
 {
   "enabledPlugins": {
-    "typescript-lsp@claude-plugins-official": true
+    "typescript-lsp@claude-plugins-official": true,
+    "sugio-plugin@sugio-marketplace": true,
+    "test-plugin@sugio-marketplace": true
   }
 }
