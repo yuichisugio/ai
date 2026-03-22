@@ -15,15 +15,15 @@
 			"description": "A plugin to use for Sugio's work",
 			"source": {
 				"source": "github",
-				"repo": "yuuichisugio/ai"
+				"repo": "yuichisugio/ai"
 			},
 			"version": "1.0.0",
 			"author": {
 				"name": "sugio",
 				"email": "sugio@example.com"
 			},
-			"homepage": "https://github.com/yuuichisugio/ai",
-			"repository": "https://github.com/yuuichisugio/ai",
+			"homepage": "https://github.com/yuichisugio/ai",
+			"repository": "https://github.com/yuichisugio/ai",
 			"license": "MIT",
 			"keywords": ["sugio", "plugin", "work"],
 			"categories": "production",
@@ -34,7 +34,7 @@
 			"name": "test-plugin",
 			"source": {
 				"source": "github",
-				"repo": "yuuichisugio/ai"
+				"repo": "yuichisugio/ai"
 			},
 			"description": "A plugin to test the marketplace",
 			"version": "1.0.0",
@@ -42,8 +42,8 @@
 				"name": "sugio",
 				"email": "sugio@example.com"
 			},
-			"homepage": "https://github.com/yuuichisugio/ai",
-			"repository": "https://github.com/yuuichisugio/ai",
+			"homepage": "https://github.com/yuichisugio/ai",
+			"repository": "https://github.com/yuichisugio/ai",
 			"license": "MIT",
 			"keywords": ["test", "plugin", "marketplace"],
 			"categories": "development",
