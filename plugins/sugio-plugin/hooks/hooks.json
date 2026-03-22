@@ -1,13 +1,12 @@
 {
-	"description": "sugio-plugin のテスト用フック：ファイル編集時に特徴的なメッセージを出力する",
 	"hooks": {
-		"PreToolUse": [
+		"Notification": [
 			{
-				"matcher": "Edit|Write|MultiEdit",
+				"matcher": "",
 				"hooks": [
 					{
 						"type": "command",
-						"command": "echo '🛠️ ✨ [sugio-plugin] ファイルが編集されました！この一行があなたのコードを守る番人です ✨ 🛠️'"
+						"command": "osascript -e 'display notification \"Claude Code needs your attention\" with title \"Claude Code\"'"
 					}
 				]
 			}
