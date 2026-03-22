@@ -1,4 +1,10 @@
 {
+  "permissions": {
+    "allow": [
+      "Bash(xargs -I{} head -5 {})",
+      "Bash(find /Users/sugio_yuuichi/.claude/plugins/cache/claude-plugins-official/superpowers -name \"SKILL.md\" -exec grep \"^name:\" {})"
+    ]
+  },
   "enabledPlugins": {
     "typescript-lsp@claude-plugins-official": true,
     "sugio-plugin@sugio-marketplace": true,

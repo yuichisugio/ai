@@ -11,8 +11,5 @@
 	"repository": "https://github.com/yuichisugio/ai",
 	"license": "MIT",
 	"keywords": ["sugio", "plugin", "work"],
-	"categories": "production",
-	"skills": "./skills",
-	"mcpServers": "./.mcp.json",
-	"lspServers": "./.lsp.json"
+	"categories": "production"
 }
