@@ -14,7 +14,6 @@
 	"categories": "production",
 	"hooks": "./hooks/hooks.json",
 	"skills": "./skills",
-	"agents": "./agents",
 	"mcpServers": "./.mcp.json",
 	"lspServers": "./.lsp.json"
 }
