@@ -3,6 +3,13 @@
 	"description": "A plugin to test the marketplace",
 	"version": "1.0.0",
 	"author": {
-		"name": "sugio"
-	}
+		"name": "sugio",
+		"email": "sugio@example.com",
+		"url": "https://github.com/yuichisugio"
+	},
+	"homepage": "https://github.com/yuichisugio/ai",
+	"repository": "https://github.com/yuichisugio/ai",
+	"license": "MIT",
+	"keywords": ["sugio", "plugin", "work"],
+	"categories": "development"
 }
