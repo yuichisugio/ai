@@ -1,0 +1,16 @@
+{
+	"description": "sugio-plugin のテスト用フック：ファイル編集時に特徴的なメッセージを出力する",
+	"hooks": {
+		"PreToolUse": [
+			{
+				"matcher": "Edit|Write|MultiEdit",
+				"hooks": [
+					{
+						"type": "command",
+						"command": "echo '🛠️ ✨ [sugio-plugin] ファイルが編集されました！この一行があなたのコードを守る番人です ✨ 🛠️'"
+					}
+				]
+			}
+		]
+	}
+}
