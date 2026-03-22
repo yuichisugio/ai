@@ -3,7 +3,13 @@
     "allow": [
       "Bash(xargs -I{} head -5 {})",
       "Bash(find /Users/sugio_yuuichi/.claude/plugins/cache/claude-plugins-official/superpowers -name \"SKILL.md\" -exec grep \"^name:\" {})",
-      "Bash(xargs cat:*)"
+      "Bash(xargs cat:*)",
+      "Bash(grep -o '.\\\\{0,30\\\\}pluginId.\\\\{0,30\\\\}')",
+      "Bash(grep -o '.\\\\{0,50\\\\}commandName.\\\\{0,50\\\\}')",
+      "Bash(grep -o '.\\\\{0,80\\\\}skillId.\\\\{0,80\\\\}')",
+      "Bash(grep -o '.\\\\{0,60\\\\}getSkill\\\\|skill.*conflict\\\\|conflict.*skill\\\\|uniqueSkill\\\\|disambig\\\\|dedup\\\\|deduplicate')",
+      "Bash(grep -o '.\\\\{0,100\\\\}disambig.\\\\{0,100\\\\}')",
+      "Bash(grep -o '.\\\\{0,100\\\\}dedup.\\\\{0,100\\\\}')"
     ]
   },
   "enabledPlugins": {
