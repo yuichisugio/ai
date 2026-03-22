@@ -1,0 +1,8 @@
+{
+	"name": "test-plugin",
+	"description": "A plugin to test the marketplace",
+	"version": "1.0.0",
+	"author": {
+		"name": "sugio"
+	}
+}

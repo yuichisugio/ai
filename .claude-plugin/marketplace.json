@@ -1,0 +1,54 @@
+{
+	"name": "sugio-marketplace",
+	"owner": {
+		"name": "sugio",
+		"email": "sugio@example.com"
+	},
+	"metadata": {
+		"pluginRoot": "../plugins",
+		"description": "A marketplace for plugins",
+		"version": "1.0.0"
+	},
+	"plugins": [
+		{
+			"name": "sugio-plugin",
+			"description": "A plugin to use for Sugio's work",
+			"source": {
+				"source": "github",
+				"repo": "yuuichisugio/ai"
+			},
+			"version": "1.0.0",
+			"author": {
+				"name": "sugio",
+				"email": "sugio@example.com"
+			},
+			"homepage": "https://github.com/yuuichisugio/ai",
+			"repository": "https://github.com/yuuichisugio/ai",
+			"license": "MIT",
+			"keywords": ["sugio", "plugin", "work"],
+			"categories": "production",
+			"tags": ["sugio", "plugin", "work"],
+			"strict": true
+		},
+		{
+			"name": "test-plugin",
+			"source": {
+				"source": "github",
+				"repo": "yuuichisugio/ai"
+			},
+			"description": "A plugin to test the marketplace",
+			"version": "1.0.0",
+			"author": {
+				"name": "sugio",
+				"email": "sugio@example.com"
+			},
+			"homepage": "https://github.com/yuuichisugio/ai",
+			"repository": "https://github.com/yuuichisugio/ai",
+			"license": "MIT",
+			"keywords": ["test", "plugin", "marketplace"],
+			"categories": "development",
+			"tags": ["test", "plugin", "marketplace"],
+			"strict": true
+		}
+	]
+}
