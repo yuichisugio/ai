@@ -20,8 +20,10 @@ argument-hint: [github|bitbucket, pr_id]
 
 ### GitHub の場合
 
+スキル読み込み時に示された `Base directory for this skill:` のパスを `SKILL_BASE_DIR` として、以下を実行する:
+
 ```bash
-bash scripts/fetch_github.sh $PR_ID
+bash "${SKILL_BASE_DIR}/scripts/fetch_github.sh" $PR_ID
 ```
 
 **`scripts/fetch_github.sh`** が行うこと:
@@ -31,8 +33,10 @@ bash scripts/fetch_github.sh $PR_ID
 
 ### Bitbucket の場合
 
+スキル読み込み時に示された `Base directory for this skill:` のパスを `SKILL_BASE_DIR` として、以下を実行する:
+
 ```bash
-bash scripts/fetch_bitbucket.sh $PR_ID
+bash "${SKILL_BASE_DIR}/scripts/fetch_bitbucket.sh" $PR_ID
 ```
 
 **`scripts/fetch_bitbucket.sh`** が行うこと:
