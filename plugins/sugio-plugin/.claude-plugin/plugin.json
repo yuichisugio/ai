@@ -12,7 +12,7 @@
 	"license": "MIT",
 	"keywords": ["sugio", "plugin", "work"],
 	"categories": "production",
-"skills": "./skills",
+	"skills": "./skills",
 	"mcpServers": "./.mcp.json",
 	"lspServers": "./.lsp.json"
 }
