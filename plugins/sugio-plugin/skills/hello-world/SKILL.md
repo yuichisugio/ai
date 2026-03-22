@@ -1,4 +1,5 @@
 ---
+name: hello-world
 description: Greet the user with a personalized message
 ---
 
