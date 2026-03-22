@@ -5,7 +5,6 @@
 		"email": "sugio@example.com"
 	},
 	"metadata": {
-		"pluginRoot": "../plugins",
 		"description": "A marketplace for plugins",
 		"version": "1.0.0"
 	},
@@ -13,10 +12,7 @@
 		{
 			"name": "sugio-plugin",
 			"description": "A plugin to use for Sugio's work",
-			"source": {
-				"source": "github",
-				"repo": "yuichisugio/ai"
-			},
+			"source": "./plugins/sugio-plugin",
 			"version": "1.0.0",
 			"author": {
 				"name": "sugio",
@@ -32,10 +28,7 @@
 		},
 		{
 			"name": "test-plugin",
-			"source": {
-				"source": "github",
-				"repo": "yuichisugio/ai"
-			},
+			"source": "./plugins/test-plugin",
 			"description": "A plugin to test the marketplace",
 			"version": "1.0.0",
 			"author": {
