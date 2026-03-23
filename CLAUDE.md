@@ -58,6 +58,7 @@ plugins/<plugin-name>/
 |---|---|
 | `identify-explain` | 実装依頼を受けた際、変更箇所をコードから特定して根拠つきで解説する（編集前の調査フェーズ） |
 | `apply-pr-feedback` | GitHubまたはBitbucketのPRレビューコメントを取得し、3エージェント並列で修正案を生成・比較する |
+| `run-e2e-from-csv` | テスト仕様書CSV（結合テストチェックリスト形式）を読み込み、Chrome in Claude でE2Eテストを実行してMarkdownレポートを出力する |
 | `hello-world` | ユーザーへの挨拶デモ用スキル |
 
 ## Rules
