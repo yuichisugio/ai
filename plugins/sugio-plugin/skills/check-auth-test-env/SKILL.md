@@ -1,5 +1,5 @@
 ---
-name: run-e2e-from-csv
+name: check-auth-test-env
 description: テスト仕様書CSVファイルを読み込み、Claude in Chromeを使ってE2Eテストを実行する。引数にCSVファイルパスを指定する。テスト実施・確認・QA実行を依頼されたときに使用する。
 ---
 
