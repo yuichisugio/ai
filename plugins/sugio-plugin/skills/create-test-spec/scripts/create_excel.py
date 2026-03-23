@@ -130,7 +130,7 @@ def create_excel(data: dict, output_path: str) -> str:
     # --- 1行目: タイトル ---
     row = 1
     ws.merge_cells(start_row=row, start_column=1, end_row=row, end_column=num_cols)
-    cell = ws.cell(row=row, column=1, value=f"結合テストチェックリスト　{data.get('title', '')}")
+    cell = ws.cell(row=row, column=1, value=f"ロムスビ　結合テストチェックリスト　{data.get('title', '')}")
     cell.font = STYLES["title"]["font"]
     ws.row_dimensions[row].height = 28
 
