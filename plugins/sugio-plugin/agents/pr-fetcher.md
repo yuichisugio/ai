@@ -25,51 +25,19 @@ tools: ["Bash", "Read"]
 
 ### GitHub の場合
 
-`gh` CLIを使用してPRデータを取得する：
-
 ```bash
-# 認証確認
-gh auth status
-
-# PR基本情報
-gh pr view {PR_ID} --json title,body,state,author,reviewDecision,baseRefName,headRefName
-
-# レビューコメント（承認/却下含む）
-gh pr view {PR_ID} --json reviews --jq '.reviews[] | {author: .author.login, state: .state, body: .body}'
-
-# インラインコメント（ファイル・行番号付き）
-gh pr view {PR_ID} --json comments --jq '.comments[] | {author: .author.login, body: .body, path: .path, line: .line}'
-
-# PR差分
-gh pr diff {PR_ID}
+bash "${CLAUDE_PLUGIN_ROOT}/scripts/fetch_github.sh" {PR_ID}
 ```
 
-`gh` が未認証の場合は `gh auth login` を案内して終了する。
+スクリプトが失敗した場合（未認証など）はエラーメッセージをそのままユーザーに報告して終了する。
 
 ### Bitbucket の場合
 
-以下の環境変数を確認し、未設定の場合はユーザーに案内して終了する：
-
-- `BITBUCKET_USER` — Bitbucketユーザー名
-- `BITBUCKET_APP_PASSWORD` — アプリパスワード（Settings > App passwords）
-- `BITBUCKET_WORKSPACE` — ワークスペースID（未設定時は git remote から推定）
-- `BITBUCKET_REPO` — リポジトリスラッグ（未設定時は git remote から推定）
-
 ```bash
-BASE_URL="https://api.bitbucket.org/2.0/repositories/${BITBUCKET_WORKSPACE}/${BITBUCKET_REPO}"
-
-# PR基本情報
-curl -s -u "${BITBUCKET_USER}:${BITBUCKET_APP_PASSWORD}" \
-  "${BASE_URL}/pullrequests/{PR_ID}"
-
-# レビューコメント
-curl -s -u "${BITBUCKET_USER}:${BITBUCKET_APP_PASSWORD}" \
-  "${BASE_URL}/pullrequests/{PR_ID}/comments"
-
-# PR差分
-curl -s -u "${BITBUCKET_USER}:${BITBUCKET_APP_PASSWORD}" \
-  "${BASE_URL}/pullrequests/{PR_ID}/diff"
+bash "${CLAUDE_PLUGIN_ROOT}/scripts/fetch_bitbucket.sh" {PR_ID}
 ```
+
+スクリプトが失敗した場合（環境変数未設定など）はエラーメッセージをそのままユーザーに報告して終了する。
 
 ---
 

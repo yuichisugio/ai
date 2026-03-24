@@ -8,13 +8,16 @@ is_background: true
 ---
 
 ## When invoked:
-1. Run git diff to see recent changes
+1. Run `bash "${CLAUDE_PLUGIN_ROOT}/scripts/get_head_diff.sh"` to see recent changes
 2. Focus on modified files
 3. Begin review immediately
 
 ## 起動時の手順
 
-1. `git diff HEAD` を実行して最新の変更差分を確認する
+1. 以下を実行して最新の変更差分を確認する：
+   ```bash
+   bash "${CLAUDE_PLUGIN_ROOT}/scripts/get_head_diff.sh"
+   ```
 2. 本番ブランチは`production`
 3. 変更されたファイルの全体像を把握する
 4. 以下のチェックリストに沿ってレビューを実施する

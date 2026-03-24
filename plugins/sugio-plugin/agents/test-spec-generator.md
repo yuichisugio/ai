@@ -16,12 +16,15 @@ tools: ["Bash", "Read", "Grep", "Glob"]
 
 ### 1. 差分の取得
 
+**最初のアクションとして必ず以下を実行する。他のコマンドより先に実行すること。**
+
 ```bash
-git diff production...HEAD --stat
-git diff production...HEAD
+bash "${CLAUDE_PLUGIN_ROOT}/scripts/get_diff.sh"
 ```
 
-まず `--stat` で変更ファイルの全体像を把握し、次に詳細な差分を確認する。変更が大きい場合はファイルごとに分けて読む。
+スクリプトが失敗した場合はエラーメッセージをそのままユーザーに報告して終了する。
+
+変更が大きい場合はファイルごとに分けて読む。
 
 ### 2. 変更内容の分析
 
