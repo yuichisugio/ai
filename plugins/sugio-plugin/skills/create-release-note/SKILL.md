@@ -64,7 +64,7 @@ feature/xxx
   - XXX
   - YYY
 - 開発担当
-  - TBD
+  - 杉尾
 - リリース監督役
   - TBD
 ```
