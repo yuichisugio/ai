@@ -8,7 +8,7 @@ tools: ["Bash", "Read", "Grep", "Glob"]
 
 ## 役割
 
-複数のスキルから共通して使われる差分解析エージェント。`git diff production...HEAD` を取得・解析し、呼び出し元が使いやすい構造化テキストとして返す。コードは変更しない。
+複数のスキルから共通して使われる差分解析エージェント。専用スクリプトで差分を取得・解析し、呼び出し元が使いやすい構造化テキストとして返す。コードは変更しない。
 
 ---
 
@@ -16,13 +16,13 @@ tools: ["Bash", "Read", "Grep", "Glob"]
 
 ### 1. 差分の取得
 
+**最初のアクションとして必ず以下を実行する。他のコマンドより先に実行すること。**
+
 ```bash
-git fetch origin production
-git branch --show-current
-git log --oneline origin/production..HEAD
-git diff --stat origin/production...HEAD
-git diff origin/production...HEAD
+bash "${CLAUDE_PLUGIN_ROOT}/scripts/get_diff.sh"
 ```
+
+スクリプトが失敗した場合はエラーメッセージをそのままユーザーに報告して終了する。
 
 変更量が多い場合（差分が10,000行を超えるなど）は、ファイルごとに分けて読む。
 
