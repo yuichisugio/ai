@@ -43,26 +43,9 @@ plugins/<plugin-name>/
 - `.agents/commands/` — ローカルコマンド
 - `.agents/rules/` — ルール・ドキュメント
 
-## Key Files
-
-| ファイル | 役割 |
-|---|---|
-| `.claude-plugin/marketplace.json` | マーケットプレイス定義・プラグイン一覧 |
-| `plugins/sugio-plugin/hooks/hooks.json` | Notificationフック（macOS通知） |
-| `plugins/sugio-plugin/.mcp.json` | chrome-devtools-mcp の設定 |
-| `plugins/sugio-plugin/.lsp.json` | gopls（Go言語サーバー）の設定 |
-
-## Skills in sugio-plugin
-
-| スキル | 用途 |
-|---|---|
-| `identify-explain` | 実装依頼を受けた際、変更箇所をコードから特定して根拠つきで解説する（編集前の調査フェーズ） |
-| `apply-pr-feedback` | GitHubまたはBitbucketのPRレビューコメントを取得し、3エージェント並列で修正案を生成・比較する |
-| `run-e2e-from-csv` | テスト仕様書CSV（結合テストチェックリスト形式）を読み込み、Chrome in Claude でE2Eテストを実行してMarkdownレポートを出力する |
-| `hello-world` | ユーザーへの挨拶デモ用スキル |
-
 ## Rules
 
 - 常に日本語で回答する（`AGENTS.md` の指示）
 - `review-agent` は `readonly: true, is_background: true` で動作し、`git diff HEAD` を起点にレビューを行う
 - 本番ブランチは `production`
+- 作成する対象のベストプラクティスやドキュメントをサブエージェントを使用してよく調査してから実装に取り組んでいください。

@@ -2,7 +2,8 @@
 name: review-agent
 model: inherit
 description: コードレビューの専門家。コードの品質・セキュリティ・保守性を多角的に分析し、具体的な改善提案を行う。コードを書いた後や変更した後に積極的に活用する。
-readonly: true
+color: yellow
+tools: ["Bash", "Read", "Grep", "Glob"]
 is_background: true
 ---
 
