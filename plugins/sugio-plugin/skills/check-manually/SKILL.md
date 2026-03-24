@@ -1,6 +1,7 @@
 ---
 name: check-manually
 description: テスト仕様書（CSV・Markdownなど）とサービスURLを受け取り、Claude in ChromeでE2Eテストを実行してMarkdownレポートを出力する。引数にCSVファイルパスまたはMarkdownファイルパスとURLを指定する。テスト仕様書が省略された場合はカレントブランチとproductionブランチの差分から自動生成する。テスト実施・QA確認・結合テスト・ブラウザ動作確認を依頼されたときに使用する。手動テストの自動実行、テストケースを元にした画面操作確認にも積極的に使用する。
+argument-hint: [url, spec_csv|spec_markdown]
 ---
 
 # E2Eテスト実行スキル
