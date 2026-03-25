@@ -1,7 +1,7 @@
 {
 	"name": "sugio-plugin",
 	"description": "A plugin to learn the basics",
-	"version": "1.0.18",
+	"version": "1.0.19",
 	"author": {
 		"name": "sugio",
 		"email": "sugio@example.com",
