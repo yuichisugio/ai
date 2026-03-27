@@ -1,0 +1,20 @@
+{
+	"name": "repo-local",
+	"interface": {
+		"displayName": "Repo Local Plugins"
+	},
+	"plugins": [
+		{
+			"name": "sugio-plugin",
+			"source": {
+				"source": "local",
+				"path": "./plugins/sugio-plugin"
+			},
+			"policy": {
+				"installation": "AVAILABLE",
+				"authentication": "ON_INSTALL"
+			},
+			"category": "Productivity"
+		}
+	]
+}

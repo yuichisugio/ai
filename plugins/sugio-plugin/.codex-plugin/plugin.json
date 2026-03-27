@@ -1,0 +1,41 @@
+{
+  "name": "sugio-plugin",
+  "version": "1.0.20",
+  "description": "Repository-specific development workflows, review support, and release utilities for this workspace.",
+  "author": {
+    "name": "yuichi",
+    "email": "sugio_yuuichi@gmail.com",
+    "url": "https://github.com/yuichisugio"
+  },
+  "homepage": "https://github.com/yuichisugio/ai",
+  "repository": "https://github.com/yuichisugio/ai",
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "plugin",
+    "review",
+    "release",
+    "workflow"
+  ],
+  "skills": "./skills/",
+  "hooks": "./hooks/hooks.json",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Sugio Plugin",
+    "shortDescription": "レビュー、リリース、検証を支援するリポジトリ専用ワークフロー集",
+    "longDescription": "このリポジトリで使うレビュー対応、リリースノート作成、テスト仕様化、手動確認、環境作成などのスキルをまとめた Codex プラグインです。",
+    "developerName": "yuichi",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/yuichisugio/ai",
+    "defaultPrompt": [
+      "PR のレビューコメントを整理して修正方針を提案して。",
+      "production 差分からリリースノートを作成して。",
+      "変更内容からテスト仕様と手動確認項目をまとめて。"
+    ],
+    "brandColor": "#2563EB"
+  }
+}
