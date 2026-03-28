@@ -1,0 +1,13 @@
+interface:
+  display_name: "Create Test Spec"
+  short_description: "差分を基に結合テスト仕様書とテスト観点を詳しく作成する"
+  icon_small: "./assets/icon-small.svg"
+  icon_large: "./assets/icon-large.svg"
+  brand_color: "#0369A1"
+  default_prompt: "Use $create-test-spec to production 差分を基に結合テスト仕様書を作成してください。"
+
+dependencies:
+  tools: []
+
+policy:
+  allow_implicit_invocation: true

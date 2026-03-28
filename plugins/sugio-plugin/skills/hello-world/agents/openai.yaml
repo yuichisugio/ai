@@ -1,0 +1,13 @@
+interface:
+  display_name: "Hello World"
+  short_description: "固定の挨拶メッセージを返すシンプルなサンプルSkill"
+  icon_small: "./assets/icon-small.svg"
+  icon_large: "./assets/icon-large.svg"
+  brand_color: "#7C3AED"
+  default_prompt: "Use $hello-world to 固定の挨拶メッセージを返してください。"
+
+dependencies:
+  tools: []
+
+policy:
+  allow_implicit_invocation: true

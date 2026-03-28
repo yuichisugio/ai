@@ -1,0 +1,13 @@
+interface:
+  display_name: "Analyze Logs and Plan Fix"
+  short_description: "CloudWatchログ障害を調査し修正方針を整理する"
+  icon_small: "./assets/icon-small.svg"
+  icon_large: "./assets/icon-large.svg"
+  brand_color: "#C2410C"
+  default_prompt: "Use $analyze-logs-and-plan-fix to CloudWatch アラームの原因を調査し、修正方針を整理してください。"
+
+dependencies:
+  tools: []
+
+policy:
+  allow_implicit_invocation: true

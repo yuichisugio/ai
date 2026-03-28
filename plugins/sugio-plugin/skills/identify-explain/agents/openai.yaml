@@ -1,0 +1,13 @@
+interface:
+  display_name: "Identify and Explain"
+  short_description: "実装候補箇所と根拠を特定し丁寧かつ具体的に解説する"
+  icon_small: "./assets/icon-small.svg"
+  icon_large: "./assets/icon-large.svg"
+  brand_color: "#0F766E"
+  default_prompt: "Use $identify-explain to 指定した実装内容の変更候補箇所を特定して解説してください。"
+
+dependencies:
+  tools: []
+
+policy:
+  allow_implicit_invocation: true

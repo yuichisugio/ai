@@ -1,0 +1,13 @@
+interface:
+  display_name: "Notify Release in Teams"
+  short_description: "社内向けのTeamsリリース通知文をプレーンテキストで作る"
+  icon_small: "./assets/icon-small.svg"
+  icon_large: "./assets/icon-large.svg"
+  brand_color: "#7C2D12"
+  default_prompt: "Use $notify-release-in-teams to production 差分を基に Teams 向けのリリース通知文を作成してください。"
+
+dependencies:
+  tools: []
+
+policy:
+  allow_implicit_invocation: true

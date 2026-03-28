@@ -1,0 +1,13 @@
+interface:
+  display_name: "Apply PR Feedback"
+  short_description: "PRレビュー指摘を整理し修正案を比較して丁寧に提案する"
+  icon_small: "./assets/icon-small.svg"
+  icon_large: "./assets/icon-large.svg"
+  brand_color: "#2563EB"
+  default_prompt: "Use $apply-pr-feedback to GitHub の PR レビュー指摘を整理し、修正案を比較して提案してください。"
+
+dependencies:
+  tools: []
+
+policy:
+  allow_implicit_invocation: true

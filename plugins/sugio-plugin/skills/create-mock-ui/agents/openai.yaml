@@ -1,0 +1,13 @@
+interface:
+  display_name: "Create Mock UI"
+  short_description: "既存デザインを踏まえたモックUI案を調査して設計する"
+  icon_small: "./assets/icon-small.svg"
+  icon_large: "./assets/icon-large.svg"
+  brand_color: "#C2410C"
+  default_prompt: "Use $create-mock-ui to 既存のデザインや要件を踏まえてモック UI 案を作成してください。"
+
+dependencies:
+  tools: []
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,13 @@
+interface:
+  display_name: "Create Romusubi Test Env"
+  short_description: "romusubiのテスト環境ブランチを安全に作成して更新する"
+  icon_small: "./assets/icon-small.svg"
+  icon_large: "./assets/icon-large.svg"
+  brand_color: "#047857"
+  default_prompt: "Use $create-romusubi-test-env to romusubi のテスト環境ブランチを作成または更新してください。"
+
+dependencies:
+  tools: []
+
+policy:
+  allow_implicit_invocation: true

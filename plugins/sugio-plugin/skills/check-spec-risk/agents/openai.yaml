@@ -1,0 +1,13 @@
+interface:
+  display_name: "Check Spec Risk"
+  short_description: "実装内容の懸念点・不明点・注意点を調査して整理する"
+  icon_small: "./assets/icon-small.svg"
+  icon_large: "./assets/icon-large.svg"
+  brand_color: "#B91C1C"
+  default_prompt: "Use $check-spec-risk to 指定した実装案の懸念点・不明点・注意点を調査して解説してください。"
+
+dependencies:
+  tools: []
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,13 @@
+interface:
+  display_name: "Check Manually"
+  short_description: "E2E手動テストを実行して結果レポートを詳細にまとめる"
+  icon_small: "./assets/icon-small.svg"
+  icon_large: "./assets/icon-large.svg"
+  brand_color: "#0F766E"
+  default_prompt: "Use $check-manually to 指定URLとテスト仕様書を使って E2E 手動テストを実行し、結果をレポートしてください。"
+
+dependencies:
+  tools: []
+
+policy:
+  allow_implicit_invocation: true

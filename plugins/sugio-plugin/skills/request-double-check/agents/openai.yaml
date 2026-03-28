@@ -1,0 +1,13 @@
+interface:
+  display_name: "Request Double Check"
+  short_description: "変更内容を別観点で再確認し残るリスクを丁寧に整理する"
+  icon_small: "./assets/icon-small.svg"
+  icon_large: "./assets/icon-large.svg"
+  brand_color: "#475569"
+  default_prompt: "Use $request-double-check to 現在の変更内容を別観点で再確認してください。"
+
+dependencies:
+  tools: []
+
+policy:
+  allow_implicit_invocation: true

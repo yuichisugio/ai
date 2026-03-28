@@ -1,0 +1,13 @@
+interface:
+  display_name: "Create Release Note"
+  short_description: "差分を整理してリリースノートをMarkdownで作成する"
+  icon_small: "./assets/icon-small.svg"
+  icon_large: "./assets/icon-large.svg"
+  brand_color: "#1D4ED8"
+  default_prompt: "Use $create-release-note to production 差分を整理し、リリースノートを作成してください。"
+
+dependencies:
+  tools: []
+
+policy:
+  allow_implicit_invocation: true
