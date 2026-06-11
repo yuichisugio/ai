@@ -1,6 +1,6 @@
 {
   "name": "sugio-plugin",
-  "version": "1.0.24",
+  "version": "1.0.25",
   "description": "Repository-specific development workflows, review support, and release utilities for this workspace.",
   "author": {
     "name": "yuichi",
