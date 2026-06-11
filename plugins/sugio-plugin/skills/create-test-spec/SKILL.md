@@ -147,7 +147,7 @@ diff-analyzer の出力から以下を確認する:
 
 Agent ツールで `subagent_type: "general-purpose"` のサブエージェントを起動し、Excelファイルを生成する。
 
-出力ファイル名: `ロムスビ_テスト仕様書_<機能名>_ver<YYYYMMDD>.xlsx`
+出力ファイル名: `テスト仕様書_<リポジトリ名>_<機能名>_ver<YYYYMMDD>.xlsx`
 
 - `<機能名>`: ステップ2の分析で特定した主要な変更機能名（簡潔に）
 - `<YYYYMMDD>`: 実行日の日付

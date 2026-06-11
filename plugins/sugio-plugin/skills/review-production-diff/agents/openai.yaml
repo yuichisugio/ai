@@ -1,0 +1,11 @@
+interface:
+  display_name: "Review Production Diff"
+  short_description: "production差分を網羅的にレビューし懸念点を整理する"
+  brand_color: "#CA8A04"
+  default_prompt: "Use $review-production-diff to productionブランチとの差分を網羅的にレビューしてください。"
+
+dependencies:
+  tools: []
+
+policy:
+  allow_implicit_invocation: true
