@@ -1,0 +1,11 @@
+interface:
+  display_name: "PR Description V2"
+  short_description: "PRの説明を作成する"
+  brand_color: "#2563EB"
+  default_prompt: "Use $pr-desc-v2 to PRの説明を作成してください。"
+
+dependencies:
+  tools: []
+
+policy:
+  allow_implicit_invocation: true
