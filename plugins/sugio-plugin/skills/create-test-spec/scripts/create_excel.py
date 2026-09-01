@@ -44,9 +44,14 @@ except ImportError:
 # ---------------------------------------------------------------------------
 # 定数
 # ---------------------------------------------------------------------------
-COLUMNS = ["No", "分類", "テスト項目", "操作手順", "期待結果", "確認者１", "確認者２", "修正確認", "備考"]
-COL_WIDTHS = [6, 18, 40, 50, 50, 12, 12, 12, 30]
+COLUMNS = ["No", "分類", "テスト項目", "操作手順", "期待結果", "確認者１", "確認者２", "備考"]
+COL_WIDTHS = [6, 18, 38, 62, 52, 10, 10, 30]
 FONT_NAME = "Yu Gothic"
+FONT_SIZE = 10
+# 1行あたりの行高（pt）。フォントサイズ10に対して余裕を持たせた値。
+LINE_HEIGHT = 15.0
+# Excelが受け付ける行高の上限（pt）。
+MAX_ROW_HEIGHT = 409.0
 
 # ---------------------------------------------------------------------------
 # スタイル定義
@@ -75,7 +80,7 @@ STYLES = {
         "fill": PatternFill(start_color="D6E4F0", end_color="D6E4F0", fill_type="solid"),
     },
     "data": {
-        "font": Font(name=FONT_NAME, size=10),
+        "font": Font(name=FONT_NAME, size=FONT_SIZE),
         "alignment": Alignment(vertical="top", wrap_text=True),
     },
     "data_even": {
@@ -93,18 +98,21 @@ STYLES = {
 # ---------------------------------------------------------------------------
 # メイン処理
 # ---------------------------------------------------------------------------
-def estimate_row_height(text: str, col_width: int) -> float:
-    """テキストの行数からおおよその行高を計算する。"""
+def count_wrapped_lines(text: str, col_width: int) -> int:
+    """折り返しを考慮した表示行数を計算する。
+
+    Excelのカラム幅は半角文字数が単位のため、全角を2・半角を1として数えた
+    文字数をカラム幅で割ることで折り返し後の行数を求める。
+    セル内の左右パディング分として幅を1だけ差し引いて余裕を持たせる。
+    """
     if not text:
-        return 18
-    lines = str(text).split("\n")
+        return 1
+    capacity = max(1, col_width - 1)
     total_lines = 0
-    for line in lines:
-        # 1行あたりの文字数（全角≒2, 半角≒1）をざっくり推定
+    for line in str(text).split("\n"):
         char_count = sum(2 if ord(c) > 127 else 1 for c in line)
-        wrapped = max(1, -(-char_count // max(1, int(col_width * 1.5))))
-        total_lines += wrapped
-    return max(18, total_lines * 16)
+        total_lines += max(1, -(-char_count // capacity))
+    return max(1, total_lines)
 
 
 def choose_font(category: str) -> Font:
@@ -185,11 +193,10 @@ def create_excel(data: dict, output_path: str) -> str:
                 case.get("expected", ""),
                 "",  # 確認者１
                 "",  # 確認者２
-                "",  # 修正確認
                 case.get("notes", ""),
             ]
 
-            max_height = 18.0
+            max_lines = 1
             for col_idx, value in enumerate(values, 1):
                 cell = ws.cell(row=row, column=col_idx, value=value)
                 cell.font = font
@@ -197,14 +204,15 @@ def create_excel(data: dict, output_path: str) -> str:
                 cell.border = THIN_BORDER
                 if is_even:
                     cell.fill = STYLES["data_even"]["fill"]
-                # 行高の推定
-                h = estimate_row_height(str(value), COL_WIDTHS[col_idx - 1])
-                max_height = max(max_height, h)
+                # 全文が表示されるよう、最も行数が多いカラムに行高を合わせる
+                max_lines = max(max_lines, count_wrapped_lines(str(value), COL_WIDTHS[col_idx - 1]))
 
-            # No列は中央寄せ
-            ws.cell(row=row, column=1).alignment = Alignment(horizontal="center", vertical="top")
+            # No列は中央寄せ（折り返しは維持する）
+            ws.cell(row=row, column=1).alignment = Alignment(
+                horizontal="center", vertical="top", wrap_text=True
+            )
 
-            ws.row_dimensions[row].height = min(max_height, 200)
+            ws.row_dimensions[row].height = min(max_lines * LINE_HEIGHT, MAX_ROW_HEIGHT)
             row += 1
 
     # ウィンドウ枠固定（ヘッダー行まで）
