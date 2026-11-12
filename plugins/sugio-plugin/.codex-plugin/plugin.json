@@ -1,6 +1,6 @@
 {
   "name": "sugio-plugin",
-  "version": "1.0.28",
+  "version": "1.0.29",
   "description": "Repository-specific development workflows, review support, and release utilities for this workspace.",
   "author": {
     "name": "yuichi",
@@ -18,7 +18,6 @@
     "workflow"
   ],
   "skills": "./skills/",
-  "hooks": "./hooks/hooks.json",
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Sugio Plugin",
